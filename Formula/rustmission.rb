@@ -1,21 +1,21 @@
 class Rustmission < Formula
   desc "TUI for Transmission daemon"
-  homepage "https://github.com/rustmission/rustmission"
-  version "0.3.1"
+  homepage "https://github.com/intuis/rustmission"
+  version "0.3.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/rustmission/rustmission/releases/download/v0.3.1/rustmission-aarch64-apple-darwin.tar.xz"
-      sha256 "58ac4ed305db1e2f06897e8a51bf01c5dbe8da09fd33ca14d0319e49c4ee797f"
+      url "https://github.com/intuis/rustmission/releases/download/v0.3.2/rustmission-aarch64-apple-darwin.tar.xz"
+      sha256 "6798139c3064af81915d73eac72a4bf5a2bc10c7c153a66a645942adb2db8565"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rustmission/rustmission/releases/download/v0.3.1/rustmission-x86_64-apple-darwin.tar.xz"
-      sha256 "4065cee8ea503c129150d37a454e833a789f2782e0eb6b38d62314153d85730e"
+      url "https://github.com/intuis/rustmission/releases/download/v0.3.2/rustmission-x86_64-apple-darwin.tar.xz"
+      sha256 "ca36c5d51541cba9f07410346de97c12eaeb9208dcc14648503ac24fd7c12cf6"
     end
   end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/rustmission/rustmission/releases/download/v0.3.1/rustmission-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "e79cf4e95afc67f93a771710e3c5e4dc7d03adf148905bc3473849016b5511e3"
+      url "https://github.com/intuis/rustmission/releases/download/v0.3.2/rustmission-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "249a23a2f7afa9bf8b4067e59e685fea5cb9a0a99c8cd2c05fee7dad55b8cf51"
     end
   end
   license "GPL-3.0-or-later"
