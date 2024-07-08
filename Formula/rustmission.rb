@@ -1,26 +1,26 @@
 class Rustmission < Formula
   desc "TUI for Transmission daemon"
   homepage "https://github.com/intuis/rustmission"
-  version "0.3.3"
+  version "0.4.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/intuis/rustmission/releases/download/v0.3.3/rustmission-aarch64-apple-darwin.tar.xz"
-      sha256 "ae2f837321e154d54ba603045d262c467e807003a64d2ef46f4e0eb9e475e723"
+      url "https://github.com/intuis/rustmission/releases/download/v0.4.1/rustmission-aarch64-apple-darwin.tar.xz"
+      sha256 "b5d562c1fd80f6048c19e10dde427052d11cddf966a6b0a0ed19f3d2a6c8a167"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/intuis/rustmission/releases/download/v0.3.3/rustmission-x86_64-apple-darwin.tar.xz"
-      sha256 "bedc12865c29039bcd867d55c8e06eece42a4d0f62bea7ca334b09456cd5d021"
+      url "https://github.com/intuis/rustmission/releases/download/v0.4.1/rustmission-x86_64-apple-darwin.tar.xz"
+      sha256 "323769a1a9614cd5a2c42be6dd1304b371a439fc2586ac5a6e56122a15e099c6"
     end
   end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/intuis/rustmission/releases/download/v0.3.3/rustmission-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "984dcb09d807033356267641ec27936547cd05b5e1bbadfdee4125255cc9baff"
+      url "https://github.com/intuis/rustmission/releases/download/v0.4.1/rustmission-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "0d3e482462a64660903946be74e74a65bf9a3c199d4e409cf165602d0e8e8fd5"
     end
   end
   license "GPL-3.0-or-later"
 
-  BINARY_ALIASES = {"aarch64-apple-darwin": {}, "x86_64-apple-darwin": {}, "x86_64-unknown-linux-gnu": {}, "x86_64-unknown-linux-musl-dynamic": {}, "x86_64-unknown-linux-musl-static": {}}
+  BINARY_ALIASES = {"aarch64-apple-darwin": {}, "x86_64-apple-darwin": {}, "x86_64-unknown-linux-gnu": {}}
 
   def target_triple
     cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
